@@ -12,15 +12,11 @@
   text-decoration: none;
 }
 
+.NavBar a:visited {
+  color: black;
+}
+
 .NavBar a:hover {
   color: lightsteelblue;
   transition: ease-in 0.2s;
-}
-
-.NavBar a:focus {
-  color: lightskyblue;
-}
-
-.NavBar a:visited {
-  color: black;
 }

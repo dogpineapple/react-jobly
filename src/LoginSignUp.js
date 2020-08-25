@@ -3,6 +3,7 @@ import JoblyApi from "./JoblyApi";
 import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
 import { useHistory } from "react-router-dom";
+import "./LoginSignUp.css";
 
 function LogInSignUp({ logIn, isLoggedIn }) {
   // State that toggles between login and sign up form
@@ -47,12 +48,16 @@ function LogInSignUp({ logIn, isLoggedIn }) {
   // add handleSetIsLoginForm that resets the listOfErrors to [] and switches isLoginForm val.
 
   return (
-    <div>
-      <h1>Log in , sign up</h1>
-      <button disabled={isLoginForm} onClick={() => setIsLoginForm(true)}>Login</button>
-      <button disabled={!isLoginForm} onClick={() => setIsLoginForm(false)}>SignUp</button>
-      {isLoginForm ? <LoginForm login={loginUser} /> : <SignUpForm signUp={signUpUser} />}
-      {listOfErrors.map((err) => <p key={err}>{err}</p>)}
+    <div className="LoginSignUp">
+      <div className="LoginSignUp-container">
+        <h1 className="LoginSignUp-title">Log in, Sign up</h1>
+        <div className="LoginSignUp-toggle-btns">
+        <button disabled={isLoginForm} onClick={() => setIsLoginForm(true)}>Login</button>
+        <button disabled={!isLoginForm} onClick={() => setIsLoginForm(false)}>Sign Up</button>
+        </div>
+        {isLoginForm ? <LoginForm login={loginUser} /> : <SignUpForm signUp={signUpUser} />}
+        {listOfErrors.map((err) => <p className="LoginSignUp-error" key={err}>{err}</p>)}
+      </div>
     </div>
   )
 }

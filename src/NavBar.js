@@ -15,7 +15,7 @@ function NavBar({ isLoggedIn, logOutUser }) {
 
   return (
     <nav className="NavBar">
-      <NavLink exact to="/">Jobly</NavLink>
+      <NavLink exact to="/">Job.ly</NavLink>
       <div className="NavBar-right">
         {isLoggedIn ? loggedInNavBar : <NavLink exact to="/login" >Login</NavLink>}
       </div>

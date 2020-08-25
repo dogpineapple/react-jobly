@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import "./LoginForm.css";
 
 function LoginForm({ login }) {
-  const INITIAL_STATE = { username: "deena", password: "password" }
+  const INITIAL_STATE = { username: "", password: "" }
   const [formData, setFormData] = useState(INITIAL_STATE);
 
   const handleSubmit = (evt) => {
@@ -17,9 +18,9 @@ function LoginForm({ login }) {
 
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="LoginForm" onSubmit={handleSubmit}>
       <input name="username" value={formData.username} placeholder="Username" onChange={handleChange} />
-      <input name="password" value={formData.password} placeholder="Password" onChange={handleChange} />
+      <input type="password" name="password" value={formData.password} placeholder="Password" onChange={handleChange} />
       <button>Login</button>
     </form>
   )
