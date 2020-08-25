@@ -1,5 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Job.ly
+
+A job application site that allows companies to post job listings. 
+Users are able to apply to a job listing. 
+
+Created by @dogpineapple and @ulejnar. 
+
+This application uses React.js and is coupled with a Node.js/Express backend. 
+Backend: https://github.com/dogpineapple/react-jobly-backend
+
 ## Available Scripts
 
 In the project directory, you can run:
