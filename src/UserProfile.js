@@ -4,6 +4,12 @@ import JoblyApi from "./JoblyApi";
 import { useHistory } from "react-router-dom";
 import "./UserProfile.css";
 
+/**
+ * UserProfile component allow user to update user information.
+ * 
+ * `updateCurrentUser` method pings the API and is passed down 
+ *  to the `UserProfileForm` component as a prop.
+ */
 function UserProfile({ userData, changeUserData, isLoggedIn }) {
   const [listOfErrors, setListOfErrors] = useState([]);
   const [successUpdateMsg, setSuccessUpdateMsg] = useState("");
