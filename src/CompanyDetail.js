@@ -10,7 +10,7 @@ function CompanyDetails() {
   const history = useHistory();
 
   async function applyJob(jobId) {
-    const message = await JoblyApi.applyToJob(jobId);
+    await JoblyApi.applyToJob(jobId);
   }
 
   // axios call to getCompany()

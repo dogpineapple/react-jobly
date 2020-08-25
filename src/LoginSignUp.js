@@ -30,8 +30,8 @@ function LogInSignUp({ logIn, isLoggedIn }) {
       logIn(true);
       history.push("/jobs");
     } catch (err) {
-      err = err.response.data.message;
-      setListOfErrors([err]);
+      let errMsg = err.response.data.message;
+      setListOfErrors([errMsg]);
     }
   };
 
@@ -45,9 +45,14 @@ function LogInSignUp({ logIn, isLoggedIn }) {
       logIn(true);
       history.push("/jobs");
     } catch (err) {
-      err = err.response.data.message;
-      setListOfErrors(err);
+      let errMsg = err.response.data.message;
+      setListOfErrors(errMsg);
     }
+  }
+
+  const handleFormToggle = () => {
+    setListOfErrors([]);
+    setIsLoginForm(!isLoginForm);
   }
 
   // add handleSetIsLoginForm that resets the listOfErrors to [] and switches isLoginForm val.
@@ -57,8 +62,8 @@ function LogInSignUp({ logIn, isLoggedIn }) {
       <div className="LoginSignUp-container">
         <h1 className="LoginSignUp-title">Log in, Sign up</h1>
         <div className="LoginSignUp-toggle-btns">
-        <button disabled={isLoginForm} onClick={() => setIsLoginForm(true)}>Login</button>
-        <button disabled={!isLoginForm} onClick={() => setIsLoginForm(false)}>Sign Up</button>
+        <button disabled={isLoginForm} onClick={handleFormToggle}>Login</button>
+        <button disabled={!isLoginForm} onClick={handleFormToggle}>Sign Up</button>
         </div>
         {isLoginForm ? <LoginForm login={loginUser} /> : <SignUpForm signUp={signUpUser} />}
         {listOfErrors?.map(err => {
