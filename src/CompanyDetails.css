@@ -1,0 +1,21 @@
+.CompanyDetail-company {
+  font-weight: 300;
+  font-size: 1.7em;
+  margin-bottom: 0.2em;
+}
+
+.CompanyDetail-description {
+  border: lightskyblue 1px solid;
+  border-radius: 5px;
+  padding: 1.5%;
+  text-align: center;
+  width: 50%;
+
+}
+
+.CompanyDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

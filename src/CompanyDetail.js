@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import JoblyApi from './JoblyApi';
 import { useParams, useHistory } from 'react-router-dom';
 import JobCard from "./JobCard";
+import "./CompanyDetails.css";
 
 function CompanyDetails() {
   const { handle } = useParams();
@@ -27,9 +28,9 @@ function CompanyDetails() {
   }, [handle, history]);
 
   return (
-    <div>
-      <h3>{companyData.name}</h3>
-      <p>{companyData.description}</p>
+    <div className="CompanyDetail">
+      <h3 className="CompanyDetail-company">{companyData.name}</h3>
+      <p className="CompanyDetail-description">{companyData.description}</p>
       {companyData.jobs ? companyData.jobs.map(job => <JobCard key={job.id} job={job} applyJob={applyJob}/>) : null}
     </div>
   );
