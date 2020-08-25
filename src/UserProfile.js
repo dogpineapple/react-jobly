@@ -36,7 +36,7 @@ function UserProfile({ userData, changeUserData, isLoggedIn }) {
       {listOfErrors.length !== 0 && listOfErrors.map((err) => <p>{err}</p>)}
       {successUpdateMsg !== "" && successUpdateMsg}
     </div>
-  )
+  );
 }
 
 export default UserProfile;

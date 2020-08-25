@@ -6,7 +6,7 @@ function CompanyCard({ company }) {
     <div>
       <Link to={`/companies/${company.handle}`}><h4>{company.name}</h4></Link>
     </div>
-  )
+  );
 }
 
 export default CompanyCard;

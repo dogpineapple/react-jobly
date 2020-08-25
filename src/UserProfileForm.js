@@ -33,8 +33,7 @@ function UserProfileForm({ userData, updateUser }) {
       <input name="password" value={formData.password} placeholder="Re-enter password" type="password" onChange={handleChange} />
       <button>Save Changes</button>
     </form>
-  )
-
+  );
 }
 
 export default UserProfileForm;

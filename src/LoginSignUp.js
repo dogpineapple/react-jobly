@@ -62,7 +62,7 @@ function LogInSignUp({ logIn, isLoggedIn }) {
         })} */}
       </div>
     </div>
-  )
+  );
 }
 
 export default LogInSignUp;

@@ -34,7 +34,7 @@ function CompaniesList({ isLoggedIn }) {
       {listOfCompanies.map( company => <CompanyCard key={company.handle} company={company} /> )}
       </ul>
     </div>
-  )
+  );
 }
 
 export default CompaniesList;

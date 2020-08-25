@@ -23,7 +23,7 @@ function LoginForm({ login }) {
       <input type="password" name="password" value={formData.password} placeholder="Password" onChange={handleChange} />
       <button>Login</button>
     </form>
-  )
+  );
 }
 
 export default LoginForm;

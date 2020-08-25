@@ -15,7 +15,7 @@ function SignUpForm({signUp}) {
     const { name, value } = evt.target;
     setFormData((currData) => ({...currData,[name]:value}))
   }
-  
+
   return (
     <form className="SignUpForm" onSubmit={handleSubmit}>
       <input name="username" value= {formData.username} placeholder="Username" onChange={handleChange} />
@@ -25,7 +25,7 @@ function SignUpForm({signUp}) {
       <input name="email" value={formData.email} placeholder="Email" onChange={handleChange} />
       <button>Sign up</button>
     </form>
-  )
+  );
 }
 
 export default SignUpForm;

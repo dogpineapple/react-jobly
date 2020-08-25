@@ -32,7 +32,7 @@ function CompanyDetails() {
       <p>{companyData.description}</p>
       {companyData.jobs ? companyData.jobs.map(job => <JobCard key={job.id} job={job} applyJob={applyJob}/>) : null}
     </div>
-  )
+  );
 }
 
 export default CompanyDetails;
