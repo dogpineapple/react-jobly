@@ -3,7 +3,6 @@
   border-radius: 5px;
   margin: 1% 0%;
   width: 50%;
-  
 }
 
 .JobCard-container {
@@ -25,6 +24,10 @@
   color: white;
   font-weight: 700;
   border-radius: 5px;
+}
+
+.JobCard-container > button:hover {
+  cursor: pointer;
 }
 
 .JobCard-applied {

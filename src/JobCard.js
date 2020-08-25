@@ -9,9 +9,7 @@ function JobCard({ job, applyJob }) {
   // foundJob lets us keep track if the job is Applied or not. 
   // try to find the current job in the array of
   // userJobs.
-
   let foundJob = userJobs.find((el) => el.id === job.id);
-
 
   const handleApply = () => {
     // method from our JobsList.js that pings the JoblyApi to apply for job.
@@ -25,7 +23,7 @@ function JobCard({ job, applyJob }) {
       <div className="JobCard-container">
         <h5 className="JobCard-title">{job.title}</h5>
         <p className="JobCard-salary">Salary: ${job.salary}</p>
-        <p className="JobCard-equity">Equity: {job.equity}</p>
+        <p className="JobCard-equity">Equity: {job.equity * 100}%</p>
         {foundJob !== undefined ? <button className="JobCard-applied" disabled>Applied</button> : <button className="JobCard-apply" onClick={handleApply}>Apply</button>}
       </div>
     </div>

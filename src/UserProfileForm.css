@@ -34,3 +34,7 @@
   width: 10em;
   margin-top: 10%;
 }
+
+.UserProfileForm > button:hover {
+  cursor: pointer;
+}
