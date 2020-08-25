@@ -1,0 +1,20 @@
+.CompanyCard {
+  border: 1px rgb(220,220,220) solid;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.CompanyCard-title {
+  padding: 0% 3%;
+}
+
+.CompanyCard > a {
+  color: black;
+  text-decoration: none;
+}
+
+.CompanyCard > a:hover {
+  color: lightslategray;
+  transition: ease 0.3s;
+}

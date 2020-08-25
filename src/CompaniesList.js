@@ -3,6 +3,7 @@ import JoblyApi from "./JoblyApi";
 import CompanyCard from './CompanyCard';
 import SearchForm from './SearchForm';
 import { useHistory } from "react-router-dom";
+import "./CompaniesList.css";
 
 function CompaniesList({ isLoggedIn }) {
   const [listOfCompanies, setListOfCompanies] = useState([]);
@@ -27,10 +28,10 @@ function CompaniesList({ isLoggedIn }) {
 
 
   return (
-    <div>
-      CompaniesList
+    <div className="CompaniesList">
+      <h2 className="CompaniesList-title">Companies</h2>
       <SearchForm search={searchCompanies}/>
-      <ul>
+      <ul className="CompaniesList-list">
       {listOfCompanies.map( company => <CompanyCard key={company.handle} company={company} /> )}
       </ul>
     </div>
