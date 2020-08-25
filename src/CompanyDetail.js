@@ -10,7 +10,6 @@ function CompanyDetails() {
 
   async function applyJob(jobId) {
     const message = await JoblyApi.applyToJob(jobId);
-    console.log(message);
   }
 
   // axios call to getCompany()

@@ -1,0 +1,21 @@
+.SearchForm {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+
+.SearchForm > input {
+  padding: 2%;
+  width: 70%;
+}
+
+.SearchForm > button {
+  border: none;
+  background-color: lightskyblue;
+  color: white;
+  border-radius: 5px;
+  padding: 3%;
+  width: 30%;
+  margin-left: 1em;
+  font-weight: 700;
+}

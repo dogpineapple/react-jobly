@@ -47,6 +47,7 @@ function LogInSignUp({ logIn, isLoggedIn }) {
 
   // add handleSetIsLoginForm that resets the listOfErrors to [] and switches isLoginForm val.
 
+  console.log("listoferrors....",listOfErrors);
   return (
     <div className="LoginSignUp">
       <div className="LoginSignUp-container">
@@ -56,7 +57,9 @@ function LogInSignUp({ logIn, isLoggedIn }) {
         <button disabled={!isLoginForm} onClick={() => setIsLoginForm(false)}>Sign Up</button>
         </div>
         {isLoginForm ? <LoginForm login={loginUser} /> : <SignUpForm signUp={signUpUser} />}
-        {listOfErrors.map((err) => <p className="LoginSignUp-error" key={err}>{err}</p>)}
+        {/* {listOfErrors.map(err => {
+          return <p className="LoginSignUp-error" key={err}>{err}</p>;
+        })} */}
       </div>
     </div>
   )

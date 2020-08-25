@@ -37,10 +37,8 @@ function App() {
 
         const userResp = await JoblyApi.getUser(`/${username}`);
         setUserData(userResp);
-        console.log("got the user data in App", userResp);
         setLoggedIn(true);
       } catch (err) {
-        console.log(err);
         setLoggedIn(false);
       }
     }

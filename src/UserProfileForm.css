@@ -1,0 +1,36 @@
+.UserProfileForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.UserProfileForm-label {
+  margin: 20% 0% 0% 0%;
+}
+
+.UserProfileForm-username {
+  margin-top: 5%;
+  border: lightgray solid 1px;
+  background-color: lightgrey;
+  border-radius: 5px;
+  width: 10.5em;
+  text-align: center;
+}
+
+.UserProfileForm > input {
+  text-align: center;
+  margin-top: 5%;
+  border: lightgray solid 1px;
+  border-radius: 5px;
+  padding: 2%;
+  width: 12em;
+  height: 1.5em;
+}
+
+.UserProfileForm > button {
+  border: none;
+  border-radius: 5px;
+  height: 1.5em;
+  width: 10em;
+  margin-top: 10%;
+}

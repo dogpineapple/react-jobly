@@ -3,6 +3,7 @@ import SearchForm from "./SearchForm";
 import JobCard from "./JobCard";
 import JoblyApi from "./JoblyApi";
 import { useHistory } from "react-router-dom";
+import "./JobsList.css";
 
 
 function JobsList({ userData }) {
@@ -38,8 +39,8 @@ function JobsList({ userData }) {
   }, [history]);
 
   return (
-    <div>
-      Jobs List
+    <div className="JobsList">
+      <h2 className="JobsList-title">Job Listings</h2>
       {message !== "" ? <p style={{ color: "green" }}>{message}</p> : null}
       <SearchForm search={searchJobs} />
       {listOfJobs.map((job) => {

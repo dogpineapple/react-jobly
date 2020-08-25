@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
+// const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
+const BASE_URL = "http://localhost:3001";
 
 class JoblyApi {
   static async request(endpoint, params = {}, verb = "get") {
@@ -14,12 +15,11 @@ class JoblyApi {
       : { _token, ...params };            // POST, PATCH
 
 
-    const req = axios[verb](`${BASE_URL}/${endpoint}`, data);
+    const req = await axios[verb](`${BASE_URL}/${endpoint}`, data);
 
     try {
-      return (await req).data;
+      return req.data;
     } catch (err) {
-      console.error("API Error:", err);
       let message = err.response.data.message;
       throw Array.isArray(message) ? message : [message];
     }
@@ -66,7 +66,6 @@ class JoblyApi {
     let res = await this.request(`jobs/${jobId}/apply`, {} ,'post');
     return res.message;
   }
-
 
 }
 

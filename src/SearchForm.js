@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+import "./SearchForm.css";
+
 // change the props method as search instead of two seperate 
 function SearchForm({search}) {
   const INITIALFORMSTATE = {search: ""};
@@ -18,11 +20,11 @@ function SearchForm({search}) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="search">Search term:</label>
+    <form className="SearchForm" onSubmit={handleSubmit}>
       <input
         id="search"
         name="search"
+        placeholder="Search"
         value={formData.search}
         onChange={handleChange}
       />

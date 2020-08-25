@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import UserProfileForm from "./UserProfileForm";
 import JoblyApi from "./JoblyApi";
 import { useHistory } from "react-router-dom";
+import "./UserProfile.css";
 
 function UserProfile({ userData, changeUserData, isLoggedIn }) {
   const [listOfErrors, setListOfErrors] = useState([]);
@@ -28,8 +29,10 @@ function UserProfile({ userData, changeUserData, isLoggedIn }) {
 
   //show form only if some property in the userdata exists
   return (
-    <div>
-      {userData.first_name ? <UserProfileForm userData={userData} updateUser={updateCurrentUser} />: "loading"}
+    <div className="UserProfile">
+      <div className="UserProfile-container">
+        {userData.first_name ? <UserProfileForm userData={userData} updateUser={updateCurrentUser} /> : "loading"}
+      </div>
       {listOfErrors.length !== 0 && listOfErrors.map((err) => <p>{err}</p>)}
       {successUpdateMsg !== "" && successUpdateMsg}
     </div>

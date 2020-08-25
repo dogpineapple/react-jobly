@@ -6,6 +6,11 @@
 
 .NavBar-right {
   float: right;
+  display: flex;
+}
+
+.NavBar-right > a {
+  margin-left: 1em;
 }
 
 .NavBar a {

@@ -1,0 +1,10 @@
+.JobsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.JobsList-title {
+  font-weight: 300;
+}
+

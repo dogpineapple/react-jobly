@@ -1,0 +1,36 @@
+.JobCard {
+  border: 1px rgb(220,220,220) solid;
+  border-radius: 5px;
+  margin: 1% 0%;
+  width: 50%;
+  
+}
+
+.JobCard-container {
+  margin: 5%;
+  color: #2d2d2d;
+}
+
+.JobCard-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+.JobCard-container > button {
+  float: right;
+  margin-bottom: 2%;
+  border: none;
+  width: 6em;
+  height: 2em;
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.JobCard-applied {
+  background-color: lightgreen;
+}
+
+.JobCard-apply {
+  background-color: lightskyblue;
+}

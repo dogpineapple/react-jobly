@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./UserProfileForm.css";
 
 function UserProfileForm({ userData, updateUser }) {
   console.log("userData", userData);
@@ -22,15 +23,15 @@ function UserProfileForm({ userData, updateUser }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <p> Username </p>
-      <p> {userData.username} </p>
+    <form className="UserProfileForm" onSubmit={handleSubmit}>
+      <p className="UserProfileForm-label">Username</p>
+      <p className="UserProfileForm-username">{userData.username}</p>
       <input name="first_name" value={formData.first_name} placeholder="First name" onChange={handleChange} />
       <input name="last_name" value={formData.last_name} placeholder="Last name" onChange={handleChange} />
       <input name="email" value={formData.email} placeholder="Email" onChange={handleChange} />
       <input name="photo_url" value={formData.photo_url} placeholder="Photo URL" onChange={handleChange} />
       <input name="password" value={formData.password} placeholder="Re-enter password" type="password" onChange={handleChange} />
-      <button>SaveChanges</button>
+      <button>Save Changes</button>
     </form>
   )
 

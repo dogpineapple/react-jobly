@@ -15,6 +15,7 @@ function SignUpForm({signUp}) {
     const { name, value } = evt.target;
     setFormData((currData) => ({...currData,[name]:value}))
   }
+  
   return (
     <form className="SignUpForm" onSubmit={handleSubmit}>
       <input name="username" value= {formData.username} placeholder="Username" onChange={handleChange} />
