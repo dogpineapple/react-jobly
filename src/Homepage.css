@@ -1,0 +1,24 @@
+.Homepage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Homepage-title {
+  margin-top: 5em;
+  font-weight: 200;
+}
+
+.Homepage-description {
+  margin-top: 0;
+  font-weight: 100;
+}
+
+.Homepage > a > button {
+  border: none;
+  margin-top: 0.5em;
+  width: 5em;
+  padding: 15%;
+  border-radius: 5px;
+}

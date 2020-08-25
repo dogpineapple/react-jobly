@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./NavBar.css";
 
 function NavBar({ isLoggedIn, logOutUser }) {
   // we can use a <ul> instead of <span> and wrap <navlink> with a <li>
@@ -15,7 +16,9 @@ function NavBar({ isLoggedIn, logOutUser }) {
   return (
     <nav className="NavBar">
       <NavLink exact to="/">Jobly</NavLink>
-      {isLoggedIn ? loggedInNavBar : <NavLink exact to="/login" >Login</NavLink>}
+      <div className="NavBar-right">
+        {isLoggedIn ? loggedInNavBar : <NavLink exact to="/login" >Login</NavLink>}
+      </div>
     </nav>
   );
 }

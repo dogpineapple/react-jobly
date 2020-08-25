@@ -1,0 +1,26 @@
+.NavBar {
+  background-color: rgba(250, 250, 250, 0.5);
+  width: auto;
+  padding: 1%;
+}
+
+.NavBar-right {
+  float: right;
+}
+
+.NavBar a {
+  text-decoration: none;
+}
+
+.NavBar a:hover {
+  color: lightsteelblue;
+  transition: ease-in 0.2s;
+}
+
+.NavBar a:focus {
+  color: lightskyblue;
+}
+
+.NavBar a:visited {
+  color: black;
+}
