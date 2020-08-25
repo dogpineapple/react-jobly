@@ -22,32 +22,36 @@ function LogInSignUp({ logIn, isLoggedIn }) {
   // loginUser: obtain token from backend and set token to localStorage
   // redirect the successfully logged in user to "/jobs" 
   const loginUser = async (data) => {
+    // clear error before each login attempt
+    setListOfErrors([]);
     try {
       const token = await JoblyApi.login(data);
       localStorage.setItem("_token", token);
       logIn(true);
       history.push("/jobs");
     } catch (err) {
-      setListOfErrors(err);
+      err = err.response.data.message;
+      setListOfErrors([err]);
     }
   };
 
   // signUpUser: obtain token from backend and set token to localStorage
   // redirect the successfully signed up user to "/jobs" 
   const signUpUser = async (data) => {
+    setListOfErrors([]);
     try {
       const token = await JoblyApi.signup(data);
       localStorage.setItem("_token", token);
       logIn(true);
       history.push("/jobs");
     } catch (err) {
+      err = err.response.data.message;
       setListOfErrors(err);
     }
   }
 
   // add handleSetIsLoginForm that resets the listOfErrors to [] and switches isLoginForm val.
 
-  console.log("listoferrors....",listOfErrors);
   return (
     <div className="LoginSignUp">
       <div className="LoginSignUp-container">
@@ -57,9 +61,9 @@ function LogInSignUp({ logIn, isLoggedIn }) {
         <button disabled={!isLoginForm} onClick={() => setIsLoginForm(false)}>Sign Up</button>
         </div>
         {isLoginForm ? <LoginForm login={loginUser} /> : <SignUpForm signUp={signUpUser} />}
-        {/* {listOfErrors.map(err => {
+        {listOfErrors?.map(err => {
           return <p className="LoginSignUp-error" key={err}>{err}</p>;
-        })} */}
+        })}
       </div>
     </div>
   );

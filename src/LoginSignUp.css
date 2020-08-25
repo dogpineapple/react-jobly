@@ -20,3 +20,13 @@
   padding: 0.5em;
   width: 5em;
 }
+
+.LoginSignUp-error {
+  background-color: lightcoral;
+  color: white;
+  text-align: center;
+  padding: 1.3%;
+  border-radius: 5px;
+  width: 80%;
+  margin: 1.3% 0%;
+}

@@ -31,7 +31,7 @@ function UserProfile({ userData, changeUserData, isLoggedIn }) {
   return (
     <div className="UserProfile">
       <div className="UserProfile-container">
-        {userData.first_name ? <UserProfileForm userData={userData} updateUser={updateCurrentUser} /> : "loading"}
+        {userData.first_name ? <UserProfileForm userData={userData} updateUser={updateCurrentUser} /> : <p className="UserProfile-loading">loading...</p>}
       </div>
       {listOfErrors.length !== 0 && listOfErrors.map((err) => <p>{err}</p>)}
       {successUpdateMsg !== "" && successUpdateMsg}
