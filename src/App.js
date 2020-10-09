@@ -49,6 +49,7 @@ function App() {
   const logOutUser = () => {
     localStorage.clear();
     setLoggedIn(false);
+    setUserData({});
   };
 
   const applyForJob = (newJob) => {
