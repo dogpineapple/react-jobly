@@ -43,7 +43,7 @@ function App() {
       }
     }
     tokenValidation();
-  }, []);
+  }, [isLoggedIn]);
 
   // logOutUser: clears the token from localStorage, setLoggedIn to false, 
   const logOutUser = () => {
