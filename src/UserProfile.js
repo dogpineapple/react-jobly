@@ -4,6 +4,12 @@ import JoblyApi from "./JoblyApi";
 import { useHistory } from "react-router-dom";
 import "./UserProfile.css";
 
+/**
+ * UserProfile component allow user to update user information.
+ * 
+ * `updateCurrentUser` method pings the API and is passed down 
+ *  to the `UserProfileForm` component as a prop.
+ */
 function UserProfile({ userData, changeUserData, isLoggedIn }) {
   const [listOfErrors, setListOfErrors] = useState([]);
   const [successUpdateMsg, setSuccessUpdateMsg] = useState("");
@@ -14,6 +20,7 @@ function UserProfile({ userData, changeUserData, isLoggedIn }) {
     if (!isLoggedIn) {
       return history.push("/login");
     }
+
   }, [history, isLoggedIn]);
 
   const updateCurrentUser = async (data) => {
@@ -23,7 +30,7 @@ function UserProfile({ userData, changeUserData, isLoggedIn }) {
       changeUserData(updatedUserData);
       setSuccessUpdateMsg("Successfully updated.");
     } catch (err) {
-      setListOfErrors(err)
+      setListOfErrors(err);
     }
   }
 
@@ -31,7 +38,7 @@ function UserProfile({ userData, changeUserData, isLoggedIn }) {
   return (
     <div className="UserProfile">
       <div className="UserProfile-container">
-        {userData.first_name ? <UserProfileForm userData={userData} updateUser={updateCurrentUser} /> : <p className="UserProfile-loading">loading...</p>}
+        {userData ? <UserProfileForm userData={userData} updateUser={updateCurrentUser} /> : <p className="UserProfile-loading">loading...</p>}
       </div>
       {listOfErrors.length !== 0 && listOfErrors.map((err) => <p>{err}</p>)}
       {successUpdateMsg !== "" && successUpdateMsg}

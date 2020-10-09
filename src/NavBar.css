@@ -15,6 +15,7 @@
 
 .NavBar a {
   text-decoration: none;
+  color: black;
 }
 
 .NavBar a:visited {

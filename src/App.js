@@ -43,12 +43,13 @@ function App() {
       }
     }
     tokenValidation();
-  }, []);
+  }, [isLoggedIn]);
 
   // logOutUser: clears the token from localStorage, setLoggedIn to false, 
   const logOutUser = () => {
     localStorage.clear();
     setLoggedIn(false);
+    setUserData({});
   };
 
   const applyForJob = (newJob) => {
